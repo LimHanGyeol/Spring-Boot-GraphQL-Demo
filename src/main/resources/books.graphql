@@ -8,7 +8,7 @@ type Query {
 }
 
 type Book {
-    isn: Long
+    id: Long
     title: String
     publisher: String
     authors: String
