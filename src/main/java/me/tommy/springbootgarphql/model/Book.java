@@ -1,18 +1,13 @@
 package me.tommy.springbootgarphql.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Getter
 @Entity
 public class Book {
 
     @Id
-    private Long isn;
+    private Long id;
     private String title;
     private String publisher;
     private String authors;
@@ -21,11 +16,31 @@ public class Book {
     public Book() {
     }
 
-    public Book(Long isn, String title, String publisher, String authors, String publishedDate) {
-        this.isn = isn;
+    public Book(Long id, String title, String publisher, String authors, String publishedDate) {
+        this.id = id;
         this.title = title;
         this.publisher = publisher;
         this.authors = authors;
         this.publishedDate = publishedDate;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public String getAuthors() {
+        return authors;
+    }
+
+    public String getPublishedDate() {
+        return publishedDate;
     }
 }
